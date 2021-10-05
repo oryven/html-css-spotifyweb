@@ -8,12 +8,13 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
     
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #7a7d81;
 }
 
 #wrapper {
@@ -48,12 +49,13 @@ main {
 .effettua-upgrade {
     background-color: rgba(0,0,0,0.5);
     height: 80px;
+    position: relative;
 }
 
 /* main */
 
 .effettua-upgrade button {
-    background-color: rgba(0,0,0,0.7);
+    background:  transparent;
     color: white;
     border-radius: 30px;
     border: 1px solid white;
@@ -62,5 +64,16 @@ main {
     font-size: 12px;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 0px;
+}
+.nav-centrale {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.nav-centrale li {
+    display: inline-block;
+    margin-right: 15px;
+    
 }
