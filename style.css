@@ -1,4 +1,4 @@
-
+/* regole layout */
 
 * {
     margin: 0;
@@ -6,32 +6,61 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 #wrapper {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     background-color: aqua;
 }
 #wrapper::after {
     content: "";
     display: table;
     clear: both;
-
 }
 
 aside {
     width: 250px;
     float: left;
-    background-color: blueviolet;
+    background-color: black;
     height: 100%;
 }
 
 main {
-    background-color: brown;
+    background-color:#141922;
     width: calc(100% - 250px);
     float: left;
     height: 100%;
 }
 
 #player {
-    height:100px;
-    background-color: chartreuse;
+    height:80px;
+    background-color: #282828;
+}
+
+.effettua-upgrade {
+    background-color: rgba(0,0,0,0.5);
+    height: 80px;
+}
+
+/* main */
+
+.effettua-upgrade button {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding: 7px 40px;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
