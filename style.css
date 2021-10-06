@@ -18,6 +18,10 @@ a {
     cursor: pointer;
 }
 
+a:hover {
+    color: white;
+}
+
 #wrapper {
     height: calc(100vh - 80px);
 }
@@ -71,7 +75,14 @@ main {
     width: 180px;
     height: 40px;
     margin-right: 20px;
+    transition: transform;
 }
+
+.effettua-upgrade button:hover {
+    transform: scale(1.1);
+}
+
+
 .nav-centrale {
     margin-top: 80px;
     height: 50px;
@@ -137,23 +148,30 @@ h5 {
 
 aside {
     padding: 10px 10px;
-    z-index: 2;
+    /* z-index: 2; */
+    position: relative;
 }
 
-.home, .cerca, .libreria  {
+.container-logo img {
+    width: 50%;
+}
+
+.home, .cerca, .libreria, 
+.istalla-app, .utente  {
     display: flex;
     align-items: center;
 }
 
-ul {
+aside ul {
     list-style: none;
     margin: 20px 0;
 }
-li {
+
+aside li {
     margin: 5px 0px;
 }
 
-nav img {
+.nav-home img {
     width: 10%;
     margin-right: 5px;
 }
@@ -172,7 +190,27 @@ nav img {
     overflow-y: auto;
 }
 
+.sezione-utente {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 10px;
+    margin-bottom: 10px;
+}
 
+hr {
+    width: 90%;
+    margin: 10px 0 0 0;
+}
+
+.icona-utente {
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 1px 4px;
+}
 
 /* footer */
 
