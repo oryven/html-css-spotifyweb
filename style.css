@@ -1,4 +1,4 @@
-/* regole layout */
+/* regole generali */
 
 * {
     margin: 0;
@@ -15,6 +15,7 @@ body {
 a {
     text-decoration: none;
     color: #7a7d81;
+    cursor: pointer;
 }
 
 #wrapper {
@@ -55,6 +56,7 @@ main {
     justify-content: flex-end;
     align-items: center;
     position: fixed;
+    z-index: 1;
 }
 
 /* main */
@@ -131,28 +133,64 @@ h5 {
     min-height: 200px;
 }
 
+/* aside */
+
+aside {
+    padding: 10px 10px;
+    z-index: 2;
+}
+
+.home, .cerca, .libreria  {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+li {
+    margin: 5px 0px;
+}
+
+nav img {
+    width: 10%;
+    margin-right: 5px;
+}
+
+.crea-playlist {
+    display: flex;
+    align-items: center;
+}
+
+.crea-playlist i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.nav-playlist {
+    overflow-y: auto;
+}
+
+
+
 /* footer */
 
 #player {
     display: flex;
     justify-content: space-between;
+    z-index: 100;
 }
 
-.player-left {
+.player-left, .player-right {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     width: 15%;
 }
 
 .player-center {
     width: 40%;
-}
-
-.player-right {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 15%;
 }
 
 .copertina-scelta img {
@@ -192,7 +230,7 @@ h5 {
 .avanzamento-completo {
     background-color: #7a7d81;
     height: 2px;
-    width: 60%;
+    width: 70%;
 }
 
 .parte-avanzamento {
@@ -209,6 +247,6 @@ h5 {
 
 .livello-volume {
     height: 2px;
-    width: 10%;
+    width: 20%;
     background-color: white;
 }
