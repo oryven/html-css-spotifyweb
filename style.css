@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    
+    font-size: 12px;   
+    color: #7a7d81;
 }
 
 a {
@@ -19,8 +19,8 @@ a {
 
 #wrapper {
     height: calc(100vh - 80px);
-    background-color: aqua;
 }
+
 #wrapper::after {
     content: "";
     display: table;
@@ -50,24 +50,28 @@ main {
 .effettua-upgrade {
     background-color: rgba(0,0,0,0.5);
     height: 80px;
-    position: relative;
+    width: calc(100% - 250px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
 }
 
 /* main */
 
 .effettua-upgrade button {
-    background:  transparent;
+    background: transparent;
     color: white;
     border-radius: 30px;
     border: 1px solid white;
-    padding: 7px 40px;
     cursor: pointer;
     font-size: 12px;
-    position: absolute;
-    top: 20px;
-    right: 0px;
+    width: 180px;
+    height: 40px;
+    margin-right: 20px;
 }
 .nav-centrale {
+    margin-top: 80px;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -82,7 +86,8 @@ main {
 
 h2 {
     color: white;
-    /* margin-left: 10px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -100,8 +105,6 @@ h5 {
 }
 #ascolti-recenti {
     display: flex;
-    justify-content: space-around;
-    
     margin-top: 20px;
     min-height: 250px;
 }
@@ -110,39 +113,102 @@ h5 {
     text-align: center;
     width: 150px;
     height: 150px;
+    margin-right:10px ;
 }
 
-.album {
-    background-size: contain;  
+.album img {
     width: 100%; 
     height: 100%;
 }
 
-.metal {
-    background-image: url("img/metal_lifting.jpg");
-}
-
-.stranger {
-    background-image:url("img/stranger.jpeg");
-}
-
-.quiet {
-    background-image: url("img/aquietplace.jpeg");
-}
-
-.split {
-    background-image: url("img/split.jpeg");
-}
-
-.cure {
-    background-image: url("img/cure.jpeg");
-}
-
-.sinister {
-    background-image: url("img/sinister.jpeg");
+#artisti-popolari img {
+    border-radius: 50%;
 }
 
 #creato-per-john, #artisti-popolari {
+    margin-top: 30px;
     display: flex;
-    min-height: 250px;
+    min-height: 200px;
+}
+
+/* footer */
+
+#player {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.player-center {
+    width: 40%;
+}
+
+.player-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+}
+
+.copertina-scelta img {
+    width: 100%;
+}
+
+.copertina-scelta {
+    width: 20%;
+    margin: 0 10px;
+}
+
+.icons-center {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;  
+}
+
+.icons-center i {
+    color: white;
+    font-size: 14px;
+}
+
+#play {
+    font-size: 24px;
+}
+
+.avanzamento {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.avanzamento-completo {
+    background-color: #7a7d81;
+    height: 2px;
+    width: 60%;
+}
+
+.parte-avanzamento {
+    background-color: white;
+    height: 2px;
+    width: 20%;
+}
+
+.volume {
+    height: 2px;
+    background-color: #7a7d81;
+    width: 30%;
+}
+
+.livello-volume {
+    height: 2px;
+    width: 10%;
+    background-color: white;
 }
