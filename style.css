@@ -49,7 +49,10 @@ main {
 
 #player {
     height:80px;
+    width: 100%;
     background-color: #282828;
+    position: fixed;
+    z-index: 99;
 }
 
 .effettua-upgrade {
@@ -144,12 +147,50 @@ h5 {
     min-height: 200px;
 }
 
+.album {
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay i {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay:hover {
+    display: block;
+}
+
+@media screen and ( max-width: 1024px ) { 
+
+    #ascolti-recenti {
+        flex-wrap: wrap;
+    }
+    .artista {
+        height: 200px;
+        margin-bottom: 50px;
+    }
+}
+
 /* aside */
 
 aside {
     padding: 10px 10px;
+    height: 100vh;
     /* z-index: 2; */
-    position: relative;
+    /* position: relative; */
+    /* overflow-y: scroll; */
 }
 
 .container-logo img {
@@ -187,15 +228,17 @@ aside li {
 }
 
 .nav-playlist {
-    overflow-y: auto;
+    overflow-y: scroll;
+    height: 150px;
 }
 
 .sezione-utente {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 10px;
-    margin-bottom: 10px;
+    margin-top: 130px;
+    /* position: relative; */
+    /* width: 100%; */
+    /* bottom: 80px;
+    left: 10px; */
+    /* z-index: 1; */
 }
 
 hr {
@@ -232,7 +275,8 @@ hr {
 }
 
 .copertina-scelta img {
-    width: 100%;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .copertina-scelta {
